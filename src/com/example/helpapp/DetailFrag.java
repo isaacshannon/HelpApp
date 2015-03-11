@@ -1,8 +1,6 @@
 package com.example.helpapp;
 
 
-import com.authorwjf.hello_fragments.R;
-
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;

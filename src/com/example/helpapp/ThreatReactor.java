@@ -1,5 +1,4 @@
 package com.example.helpapp;
-import com.authorwjf.*;
 
 public class ThreatReactor {
 	

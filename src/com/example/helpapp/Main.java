@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.authorwjf.hello_fragments.*;
+import com.example.helpapp.*;
 
 public class Main extends Activity implements com.example.helpapp.ContinuousDictationFragment.ContinuousDictationFragmentResultsCallback{
 

@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.authorwjf.hello_fragments.R;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
