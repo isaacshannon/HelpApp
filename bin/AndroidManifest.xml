@@ -13,18 +13,31 @@
     <application
         android:icon="@drawable/ic_launcher"
         android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Holo.Light"
         android:label="@string/app_name" >
         <activity
             android:screenOrientation="portrait"
             android:label="@string/app_name"
-            android:name=".Main" >
+            android:name="com.helpapp.pages.Main" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".DetailActivity" >
+            android:name="com.helpapp.helpers.DetailActivity" >
+        </activity>
+        <activity
+            android:name="com.helpapp.pages.Emergency">
+        </activity>
+        <activity
+            android:name="com.helpapp.pages.Settings">
+        </activity>
+        <activity
+            android:name="com.helpapp.pages.SettingsKeywords">
+        </activity>
+        <activity
+            android:name="com.helpapp.pages.SettingsContacts">
         </activity>
     </application>
 

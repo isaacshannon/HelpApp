@@ -2,32 +2,60 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
     android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/emergency_button"
+        android:layout_marginTop="40sp"
+        style="@style/ButtonStyle"
+        android:text="Emergency" />
+
+    <Button
+        android:id="@+id/listen_button"
+        android:layout_marginTop="20sp"
+        style="@style/ButtonStyle"
+        android:text="Listen" />
+
+    <Button
+        android:id="@+id/checkin_button"
+        style="@style/ButtonStyle"
+        android:text="Check-In" />
+
+    <Button
+        android:id="@+id/response_button"
+        style="@style/ButtonStyle"
+        android:text="Response Time" />
+
+    <Button
+        android:id="@+id/disarm_button"
+        style="@style/ButtonStyle"
+        android:text="Disarm" />
 
     <fragment
         android:id="@+id/frag_msg1"
         android:layout_width="match_parent"
-        android:layout_height="98dp"
-        class="com.example.helpapp.DetailFrag" />
+        android:layout_height="50sp"
+        class="com.helpapp.helpers.DetailFrag" />
 
     <fragment
         android:id="@+id/frag_msg2"
         android:layout_width="match_parent"
-        android:layout_height="98dp"
-        android:layout_weight="0.72"
-        class="com.example.helpapp.DetailFrag" />
-
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_height="50sp"
+        class="com.helpapp.helpers.DetailFrag" />
 
     <fragment
         android:id="@+id/frag_dict"
         android:layout_width="match_parent"
-        android:layout_height="147dp"
-        class="com.example.helpapp.ContinuousDictationFragment" />
+        android:layout_height="40sp"
+        class="com.helpapp.helpers.ContinuousDictationFragment" />
+
+    <ImageButton
+        android:id="@+id/settings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_marginBottom="15sp"
+        android:src="@drawable/settings_logo" />
 
 </LinearLayout>
