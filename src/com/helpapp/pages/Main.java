@@ -28,6 +28,7 @@ public class Main extends Activity implements com.helpapp.helpers.ContinuousDict
 		setContentView(R.layout.main);
 		initEmergencyButton();
 		initSettingsButton();
+		initResponseTimeButton();
 	}
 	
 	@Override
@@ -58,6 +59,19 @@ public class Main extends Activity implements com.helpapp.helpers.ContinuousDict
 				// Start NewActivity.class
 				Intent myIntent = new Intent(Main.this,
 						Settings.class);
+				startActivity(myIntent);
+			}
+		});
+	}
+	
+	private void initResponseTimeButton(){
+		Button button =(Button) findViewById(R.id.response_button);
+		button.setOnClickListener(new OnClickListener() {
+			public void onClick(View arg0) {
+ 
+				// Start NewActivity.class
+				Intent myIntent = new Intent(Main.this,
+						ResponseTime.class);
 				startActivity(myIntent);
 			}
 		});

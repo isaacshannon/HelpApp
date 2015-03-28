@@ -37,7 +37,22 @@
             android:name="com.helpapp.pages.SettingsKeywords">
         </activity>
         <activity
-            android:name="com.helpapp.pages.SettingsContacts">
+            android:name="com.helpapp.pages.Contacts">
+        </activity>
+        <activity
+            android:name="com.helpapp.pages.SettingsPassword">
+        </activity>
+        <activity
+            android:name="com.helpapp.pages.ContactsSMS">
+        </activity>
+        <activity
+            android:name="com.helpapp.pages.ContactsPhone">
+        </activity>
+        <activity
+            android:name="com.helpapp.pages.ContactsEmail">
+        </activity>
+        <activity
+            android:name="com.helpapp.pages.ResponseTime">
         </activity>
     </application>
 

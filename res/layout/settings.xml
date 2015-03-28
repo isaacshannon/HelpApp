@@ -26,11 +26,6 @@
         android:text="Contacts" />
 
     <Button
-        android:id="@+id/response_button"
-        style="@style/ButtonStyle"
-        android:text="Response Time" />
-
-    <Button
         android:id="@+id/password_button"
         style="@style/ButtonStyle"
         android:text="Password" />

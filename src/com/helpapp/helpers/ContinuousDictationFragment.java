@@ -20,6 +20,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 
@@ -49,7 +50,7 @@ public class ContinuousDictationFragment extends Fragment implements Recognition
 	// Speech recognizer instance
 	private SpeechRecognizer speech = null;
 	// Speech recognition control button
-	private ImageButton controlBtn = null;
+	private Button controlBtn = null;
 	// Timer used as timeout for the speech recognition
 	private Timer speechTimeout = null;
 
@@ -61,22 +62,22 @@ public class ContinuousDictationFragment extends Fragment implements Recognition
 		case 0:
 			if (frag != null && frag.isInLayout()) 
 				frag.setText("VR Stopped");
-			controlBtn.setImageDrawable(getResources().getDrawable(R.drawable.white));
+			controlBtn.setBackground(getResources().getDrawable(R.drawable.button));
 			break;
 		case 1:
 			if (frag != null && frag.isInLayout()) 
 				frag.setText("VR Initializing");
-			controlBtn.setImageDrawable(getResources().getDrawable(R.drawable.red));
+			controlBtn.setBackground(getResources().getDrawable(R.drawable.button_red));
 			break;
 		case 2:
 			if (frag != null && frag.isInLayout()) 
 				frag.setText("VR Started");
-			controlBtn.setImageDrawable(getResources().getDrawable(R.drawable.yellow));
+			controlBtn.setBackground(getResources().getDrawable(R.drawable.button_yellow));
 			break;
 		case 3:
 			if (frag != null && frag.isInLayout()) 
 				frag.setText("VR Ready");
-			controlBtn.setImageDrawable(getResources().getDrawable(R.drawable.green));
+			controlBtn.setBackground(getResources().getDrawable(R.drawable.button_green));
 			break;
 		default:
 			break;
@@ -120,7 +121,7 @@ public class ContinuousDictationFragment extends Fragment implements Recognition
 		// Inflate the layout for this fragment
 		View view = inflater.inflate(R.layout.dictation_fragment, container, false);
 		// Associate the button from the interface
-		controlBtn = (ImageButton) view.findViewById(R.id.dictationStateButton);
+		controlBtn = (Button) view.findViewById(R.id.dictationStateButton);
 		buttonChangeState(0);
 		// Handling method for the button
 		controlBtn.setOnClickListener(new OnClickListener() {
