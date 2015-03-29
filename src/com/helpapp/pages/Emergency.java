@@ -11,8 +11,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.helpapp.R;
+import com.helpapp.fragments.ContinuousDictationFragment.ContinuousDictationFragmentResultsCallback;
 import com.helpapp.helpers.*;
-import com.helpapp.helpers.ContinuousDictationFragment.ContinuousDictationFragmentResultsCallback;
 
 public class Emergency extends Activity {
 

@@ -1,4 +1,4 @@
-package com.helpapp.helpers;
+package com.helpapp.fragments;
 
 import android.app.ListFragment;
 import android.os.Bundle;

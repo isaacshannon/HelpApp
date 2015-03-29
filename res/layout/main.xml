@@ -9,54 +9,91 @@
         android:id="@+id/emergency_button"
         style="@style/ButtonStyle"
         android:layout_marginTop="40sp"
-        android:text="Emergency" />
+        android:background="@drawable/button_red_frame"
+        android:text="Emergency"
+        android:textColor="#FF0000" />
 
     <LinearLayout
         android:layout_width="150sp"
-        android:layout_height="40sp" 
+        android:layout_height="40sp"
+        android:layout_marginBottom="5sp"
         android:layout_marginTop="20sp"
-        android:orientation="horizontal">
+        android:orientation="horizontal" >
 
         <fragment
             android:id="@+id/frag_dict"
             android:layout_width="match_parent"
             android:layout_height="40sp"
-            class="com.helpapp.helpers.ContinuousDictationFragment" />
+            class="com.helpapp.fragments.ContinuousDictationFragment" />
     </LinearLayout>
-
+    
     <Button
         android:id="@+id/checkin_button"
+        android:layout_marginTop="15sp"
         style="@style/ButtonStyle"
-        android:text="Check-In" />
-
+        android:text="Start Check-In" />
+    
+    <Button
+        android:id="@+id/disarm_button"
+        style="@style/GreyButtonStyle"
+        android:text="Check-In Now" />
+    
     <Button
         android:id="@+id/response_button"
         style="@style/ButtonStyle"
-        android:text="Response Time" />
+        android:layout_marginTop="15sp"
+        android:text="Safety Level" />
 
-    <Button
-        android:id="@+id/disarm_button"
-        style="@style/ButtonStyle"
-        android:text="Disarm" />
+    
 
-    <fragment
-        android:id="@+id/frag_msg1"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        class="com.helpapp.helpers.DetailFrag" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
 
-    <fragment
-        android:id="@+id/frag_msg2"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        class="com.helpapp.helpers.DetailFrag" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/frag_msg1"
+            android:layout_alignLeft="@+id/frag_msg1"
+            android:text="Status:"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <ImageButton
-        android:id="@+id/settings_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15sp"
-        android:background="@null"
-        android:src="@drawable/settings_logo" />
+        <fragment
+            android:id="@+id/frag_msg1"
+            android:layout_width="match_parent"
+            android:layout_height="30sp"
+            android:layout_above="@id/textView2"
+            android:layout_alignLeft="@id/textView2"
+            class="com.helpapp.fragments.DetailFrag" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/frag_msg2"
+            android:layout_alignLeft="@+id/frag_msg2"
+            android:text="Voice Recognition Results:"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <fragment
+            android:id="@+id/frag_msg2"
+            android:layout_width="200sp"
+            android:layout_height="30sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            class="com.helpapp.fragments.DetailFrag" />
+
+        <ImageButton
+            android:id="@+id/settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15sp"
+            android:layout_marginRight="5sp"
+            android:background="@null"
+            android:src="@drawable/settings_logo" />
+    </RelativeLayout>
 
 </LinearLayout>

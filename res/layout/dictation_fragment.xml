@@ -2,5 +2,5 @@
     android:id="@+id/dictationStateButton"
     android:layout_width="150sp"
     android:layout_height="40sp"
-    android:text="Listen"
+    android:text="Start Listening"
     android:contentDescription="@string/imageContentDescription" />

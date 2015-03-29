@@ -15,10 +15,12 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.helpapp.R;
+import com.helpapp.fragments.ContinuousDictationFragment;
+import com.helpapp.fragments.DetailFrag;
+import com.helpapp.fragments.ContinuousDictationFragment.ContinuousDictationFragmentResultsCallback;
 import com.helpapp.helpers.*;
-import com.helpapp.helpers.ContinuousDictationFragment.ContinuousDictationFragmentResultsCallback;
 
-public class Main extends Activity implements com.helpapp.helpers.ContinuousDictationFragment.ContinuousDictationFragmentResultsCallback{
+public class Main extends Activity implements com.helpapp.fragments.ContinuousDictationFragment.ContinuousDictationFragmentResultsCallback{
 
 	private ThreatAssessment threatAssessment = new ThreatAssessment();
 
@@ -29,6 +31,7 @@ public class Main extends Activity implements com.helpapp.helpers.ContinuousDict
 		initEmergencyButton();
 		initSettingsButton();
 		initResponseTimeButton();
+		initFrag();
 	}
 	
 	@Override
@@ -88,7 +91,7 @@ public class Main extends Activity implements com.helpapp.helpers.ContinuousDict
 		
 		DetailFrag frag2 = (DetailFrag) getFragmentManager().findFragmentById(R.id.frag_msg2);
 		if (frag2 != null && frag2.isInLayout()) 
-				frag2.setText(dictationString(dictationResults));
+				frag2.setText(dictationResults.get(0));
 		
 		int count = countKeywords(dictationResults);
 		if (count > 0){
@@ -123,20 +126,13 @@ public class Main extends Activity implements com.helpapp.helpers.ContinuousDict
 		return keyCount;
 	}
 	
-	
 	/**
-	 * returns a string of the results for debugging purposes
+	 *look at the results for the keyword
+	 * @return
 	 */
-	private String dictationString(ArrayList<String> dictationResults){
-		String words ="";
-		if(dictationResults!=null && dictationResults.size()>0){
-			for(int i=0;i<dictationResults.size();i++){
-				String word = dictationResults.get(i);
-					words+=word+", ";
-			}
-		}
-		return words;
+	private void initFrag(){
+		DetailFrag frag = (DetailFrag) getFragmentManager().findFragmentById(R.id.frag_msg2);
+		frag.setText("No results...");
 	}
-	
 	
 }

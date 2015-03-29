@@ -1,4 +1,4 @@
-package com.helpapp.helpers;
+package com.helpapp.fragments;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -61,22 +61,22 @@ public class ContinuousDictationFragment extends Fragment implements Recognition
 		switch (state) {
 		case 0:
 			if (frag != null && frag.isInLayout()) 
-				frag.setText("VR Stopped");
+				frag.setText("Keyword Recognition Deactivated");
 			controlBtn.setBackground(getResources().getDrawable(R.drawable.button));
 			break;
 		case 1:
 			if (frag != null && frag.isInLayout()) 
-				frag.setText("VR Initializing");
+				frag.setText("Initializing New Recognition Cycle");
 			controlBtn.setBackground(getResources().getDrawable(R.drawable.button_red));
 			break;
 		case 2:
 			if (frag != null && frag.isInLayout()) 
-				frag.setText("VR Started");
+				frag.setText("Analyzing Speech");
 			controlBtn.setBackground(getResources().getDrawable(R.drawable.button_yellow));
 			break;
 		case 3:
 			if (frag != null && frag.isInLayout()) 
-				frag.setText("VR Ready");
+				frag.setText("Waiting for Speech");
 			controlBtn.setBackground(getResources().getDrawable(R.drawable.button_green));
 			break;
 		default:
@@ -131,10 +131,12 @@ public class ContinuousDictationFragment extends Fragment implements Recognition
 				if (speech == null) {
 					buttonChangeState(1);
 					startVoiceRecognitionCycle();
+					controlBtn.setText("Stop Listening");
 				}
 				else {
 					buttonChangeState(1);
 					stopVoiceRecognition();
+					controlBtn.setText("Start Listening");
 				}
 			}
 		});
