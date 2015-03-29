@@ -102,6 +102,10 @@ public class Main extends Activity implements com.helpapp.fragments.ContinuousDi
 			}
 			else
 				frag.setText(dictationResults.toString());	
+			// Start NewActivity.class
+			Intent myIntent = new Intent(Main.this,
+					Emergency.class);
+			startActivity(myIntent);
 		}
 	}
 

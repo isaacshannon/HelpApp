@@ -30,6 +30,16 @@ public class SaveHandler {
 		return password;
 	}
 	
+	public void saveDangerLevel(String level){
+		editor.putString("danger",level);
+		editor.commit();
+	}
+	
+	public String getDangerLevel(){
+		String password = sharedPref.getString("danger","null");
+		return password;
+	}
+	
 	public void saveSMSContacts(ArrayList<String> contacts){
 		
 	}
