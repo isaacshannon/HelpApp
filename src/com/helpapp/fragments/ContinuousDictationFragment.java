@@ -5,6 +5,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import com.example.helpapp.R;
+import com.helpapp.pages.Main;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -128,12 +129,14 @@ public class ContinuousDictationFragment extends Fragment implements Recognition
 
 			@Override
 			public void onClick(View v) {
+				((Main) getActivity()).startListening();
 				if (speech == null) {
 					buttonChangeState(1);
 					startVoiceRecognitionCycle();
 					controlBtn.setText("Stop Listening");
 				}
 				else {
+					((Main) getActivity()).stopListening();
 					buttonChangeState(1);
 					stopVoiceRecognition();
 					controlBtn.setText("Start Listening");
