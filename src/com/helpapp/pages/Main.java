@@ -38,6 +38,7 @@ public class Main extends Activity implements com.helpapp.fragments.ContinuousDi
 	private ContinuousDictationFragment dictFrag;
 	private LinearLayout fragLayout;
 	private LinearLayout alertLayout;
+	private SaveHandler saveHandler;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,8 @@ public class Main extends Activity implements com.helpapp.fragments.ContinuousDi
 		initSettingsButton();
 		initResponseTimeButton();
 		initFrag();
+		
+		saveHandler = new SaveHandler(this);
 		
 		passwordField=(EditText) findViewById(R.id.alert_password_field);
 		emergencyTitle=(TextView) findViewById(R.id.alert_title);
@@ -143,12 +146,22 @@ public class Main extends Activity implements com.helpapp.fragments.ContinuousDi
 	 */
 	private int countKeywords(ArrayList<String> dictationResults){
 		int keyCount = 0;
-		if(dictationResults!=null && dictationResults.size()>0){
+		/*if(dictationResults!=null && dictationResults.size()>0){
 			for(int i=0;i<dictationResults.size();i++){
 				String word = dictationResults.get(i);
 				if(word.contains("help")){
 					keyCount++;}
 			}
+		}*/
+		//cycle through the result strings
+		String[] keywords = saveHandler.getKeywords();
+		for(int i=0;i<dictationResults.size();i++){
+			String[] words = dictationResults.get(i).split(" ");
+			for(String word:words)
+				for(String keyword:keywords)
+					if(keyword.equals(word))
+						keyCount++;
+			
 		}
 		return keyCount;
 	}
