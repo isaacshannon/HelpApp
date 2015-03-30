@@ -26,7 +26,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/keyword_field1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10" >
@@ -42,7 +42,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/keyword_field2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10" />
@@ -55,7 +55,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/keyword_field3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"/>
@@ -68,7 +68,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/keyword_field4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10" />
@@ -81,7 +81,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/keyword_field5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10" />

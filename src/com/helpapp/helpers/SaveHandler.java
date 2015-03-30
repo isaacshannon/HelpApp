@@ -40,6 +40,18 @@ public class SaveHandler {
 		return password;
 	}
 	
+	public void saveKeywords(String keywords){
+		editor.putString("keywords",keywords);
+		editor.commit();
+	}
+	
+	public String[] getKeywords(){
+		String keywordString = "help,";
+		keywordString+=sharedPref.getString("keywords","null");
+		
+		return keywordString.split(",");
+	}
+	
 	public void saveSMSContacts(ArrayList<String> contacts){
 		
 	}

@@ -107,6 +107,7 @@ public class Main extends Activity implements com.helpapp.fragments.ContinuousDi
 					Emergency.class);
 			startActivity(myIntent);
 		}
+		
 	}
 
 	@Override
