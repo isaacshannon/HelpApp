@@ -2,7 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/textView221"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="20sp"
+        android:text="Safety Level"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView1"
@@ -14,6 +25,7 @@
     <RadioGroup
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="40sp"
         android:orientation="vertical" >
 
         <RadioButton
@@ -42,6 +54,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
         android:text="The app will respond more quickly to a perceived emergency if you feel unsafe."
         android:textAppearance="?android:attr/textAppearanceSmall" />
 

@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textView221"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
-        android:text="Settings"
+        android:text="Set Check-In Methods"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/keywords_button"
-        android:layout_marginTop="20sp"
+        android:id="@+id/scheduled_button"
         style="@style/ButtonStyle"
-        android:text="Voice Recognition" />
+        android:layout_marginTop="15sp"
+        android:text="Scheduled" />
 
     <Button
-        android:id="@+id/contacts_button"
+        android:id="@+id/interval_button"
         style="@style/ButtonStyle"
-        android:text="Contacts" />
-
-    <Button
-        android:id="@+id/password_button"
-        style="@style/ButtonStyle"
-        android:text="Password" />
+        android:layout_marginTop="15sp"
+        android:text="Interval" />
     
+    <Button
+        android:id="@+id/done_button"
+        style="@style/ButtonStyle"
+        android:layout_marginTop="30sp"
+        android:text="Start Check-In" />
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -44,15 +45,6 @@
             android:layout_alignParentLeft="true"
             android:background="@null"
             android:text="Back" />
-
-        <!--  <Button
-            android:id="@+id/done_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:background="@null"
-            android:text="Done" />-->
     </RelativeLayout>
 
 </LinearLayout>

@@ -80,7 +80,7 @@
         android:layout_height="fill_parent" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/frag1_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/frag_msg1"
@@ -92,12 +92,12 @@
             android:id="@+id/frag_msg1"
             android:layout_width="match_parent"
             android:layout_height="30sp"
-            android:layout_above="@id/textView2"
-            android:layout_alignLeft="@id/textView2"
+            android:layout_above="@+id/frag2_title"
+            android:layout_alignLeft="@id/frag2_title"
             class="com.helpapp.fragments.DetailFrag" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/frag2_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/frag_msg2"
@@ -107,7 +107,7 @@
 
         <fragment
             android:id="@+id/frag_msg2"
-            android:layout_width="200sp"
+            android:layout_width="350sp"
             android:layout_height="30sp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"

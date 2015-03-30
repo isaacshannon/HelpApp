@@ -34,6 +34,15 @@
             android:name="com.helpapp.pages.Settings">
         </activity>
         <activity
+            android:name="com.helpapp.pages.Checkin">
+        </activity>
+        <activity
+            android:name="com.helpapp.pages.CheckinScheduled">
+        </activity>
+        <activity
+            android:name="com.helpapp.pages.CheckinInterval">
+        </activity>
+        <activity
             android:name="com.helpapp.pages.SettingsKeywords">
         </activity>
         <activity
