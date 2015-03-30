@@ -46,7 +46,7 @@ public class SaveHandler {
 	}
 	
 	public String[] getKeywords(){
-		String keywordString = "help,";
+		String keywordString = "";
 		keywordString+=sharedPref.getString("keywords","null");
 		
 		return keywordString.split(",");

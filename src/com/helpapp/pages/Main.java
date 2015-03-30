@@ -37,6 +37,7 @@ public class Main extends Activity implements com.helpapp.fragments.ContinuousDi
 	private TextView emergencyInstruction;
 	private ContinuousDictationFragment dictFrag;
 	private LinearLayout fragLayout;
+	private LinearLayout alertLayout;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,7 @@ public class Main extends Activity implements com.helpapp.fragments.ContinuousDi
 		emergencyInstruction=(TextView) findViewById(R.id.alert_password);
 		
 		fragLayout=(LinearLayout) findViewById(R.id.frag_layout);
+		//alertLayout=(LinearLayout) findViewById(R.id.alert_layout);
 		
 		checkinButton = (Button) findViewById(R.id.checkin_button);
 		disarmButton = (Button) findViewById(R.id.disarm_button);
@@ -128,7 +130,6 @@ public class Main extends Activity implements com.helpapp.fragments.ContinuousDi
 
 			startEmergency();
 		}
-		
 	}
 
 	@Override
@@ -165,7 +166,7 @@ public class Main extends Activity implements com.helpapp.fragments.ContinuousDi
 	 * reacts to an emergency
 	 */
 	public void startListening(){
-		//make the unecessary eements invisible
+		//make the unnecessary elements invisible
 		safetyButton.setVisibility(View.INVISIBLE);
 		settingsButton.setVisibility(View.INVISIBLE);
 	}
@@ -174,7 +175,7 @@ public class Main extends Activity implements com.helpapp.fragments.ContinuousDi
 	 * reacts to an emergency
 	 */
 	public void stopListening(){
-		//make the unecessary eements invisible
+		//make the unnecessary elements visible
 		safetyButton.setVisibility(View.VISIBLE);
 		settingsButton.setVisibility(View.VISIBLE);
 	}
@@ -185,7 +186,7 @@ public class Main extends Activity implements com.helpapp.fragments.ContinuousDi
 	private void startEmergency(){
 		isEmergency=true;
 		
-		//change the text of the emrgency button
+		//change the text of the emergency button
 		emergencyButton.setText("Disarm");
 		
 		//make the emergency reaction elements visible
@@ -195,7 +196,7 @@ public class Main extends Activity implements com.helpapp.fragments.ContinuousDi
 		passwordField.setVisibility(View.VISIBLE);
 		
 		
-		//make the unecessary eements invisible
+		//make the unnecessary elements invisible
 		fragLayout.setVisibility(View.INVISIBLE);
 		checkinButton.setVisibility(View.INVISIBLE);
 		safetyButton.setVisibility(View.INVISIBLE);
@@ -215,10 +216,10 @@ public class Main extends Activity implements com.helpapp.fragments.ContinuousDi
 		emergencyButton.setText("Emergency");
 		
 		//make the emergency reaction elements visible
-		emergencyTitle.setVisibility(View.INVISIBLE);
+		emergencyTitle.setVisibility(View.GONE);
 		emergencyTitle.setPadding(0,0,0,0);
-		emergencyInstruction.setVisibility(View.INVISIBLE);
-		passwordField.setVisibility(View.INVISIBLE);
+		emergencyInstruction.setVisibility(View.GONE);
+		passwordField.setVisibility(View.GONE);
 		
 		//make the unecessary elements invisible
 		fragLayout.setVisibility(View.VISIBLE);

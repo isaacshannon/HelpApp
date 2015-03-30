@@ -34,7 +34,7 @@ public class SettingsKeywords extends Activity {
 		//get the saved keywords and set them in the fields
 		String[] savedKeywords = saveHandler.getKeywords();
 		for(int i=0;i<fields.length;i++){
-			if(i<savedKeywords.length-1)
+			if(i<savedKeywords.length)
 				fields[i].setText(savedKeywords[i]);
 		}
 
