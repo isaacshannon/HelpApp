@@ -30,7 +30,7 @@ public final class R {
         public static final int settings_logo=0x7f02000a;
     }
     public static final class id {
-        public static final int action_settings=0x7f08002a;
+        public static final int action_settings=0x7f08002f;
         public static final int back_button=0x7f080004;
         public static final int captain=0x7f080011;
         public static final int checkin_button=0x7f080017;
@@ -49,6 +49,11 @@ public final class R {
         public static final int frag_msg1=0x7f080019;
         public static final int frag_msg2=0x7f08001a;
         public static final int interval_checkBox=0x7f080022;
+        public static final int keyword_field1=0x7f08002a;
+        public static final int keyword_field2=0x7f08002b;
+        public static final int keyword_field3=0x7f08002c;
+        public static final int keyword_field4=0x7f08002d;
+        public static final int keyword_field5=0x7f08002e;
         public static final int keywords_button=0x7f08001f;
         public static final int numberPicker1=0x7f080023;
         public static final int password_button=0x7f080021;
